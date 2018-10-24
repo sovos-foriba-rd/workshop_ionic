@@ -1,0 +1,23 @@
+<ion-header   >
+  <ion-navbar style="background-color: #34AEE1"    >
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    
+    <ion-title  style="background-color: #34AEE1" >Home</ion-title>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-list-header>
+      Notes
+    </ion-list-header>
+ 
+    <ion-item *ngFor="let note of noteList | async" 
+    detail-push navPush="EditNotePage" [navParams]="{note:note}">
+      {{note.title}}
+    </ion-item>
+  </ion-list>
+</ion-content>

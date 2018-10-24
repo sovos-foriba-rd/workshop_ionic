@@ -1,0 +1,26 @@
+
+<ion-header>
+ 
+  <ion-navbar >
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title>AddNote</ion-title>
+  </ion-navbar>
+ 
+</ion-header>
+ 
+<ion-content padding>
+ 
+  <ion-item>
+    <ion-label>Title</ion-label>
+    <ion-input [(ngModel)]="note.title" placeholder="Java Sample Approach"></ion-input>
+  </ion-item>
+ 
+  <ion-item>
+    <ion-label>Content</ion-label>
+    <ion-textarea [(ngModel)]="note.content" placeholder="Java Technology - Spring Framework"></ion-textarea>
+  </ion-item>
+ 
+  <button ion-button block clear (click)="addNote(note)">Add</button>
+</ion-content>

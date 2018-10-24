@@ -1,0 +1,19 @@
+<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+<ion-header style="background:#34AEE1;">
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title style="background-color: #34AEE1">Access Camera</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button ion-button (click)="takephoto()">
+    Fotoğraf Çek
+  </button>
+  <p align="center">
+    <img src="{{myphoto}}">
+  </p>
+
+</ion-content>

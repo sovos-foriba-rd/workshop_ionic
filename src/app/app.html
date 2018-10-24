@@ -1,0 +1,35 @@
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar>
+ 
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content  padding="false" style="top:0px !important;
+  background:#34AEE1;" class="side-menu-gradient content content-ios statusbar-padding">
+    <div class="spacer" style="width: 268px; height: 40px;"></div>
+    <div class="profile-image">
+      <img src="assets/imgs/z2hxA3HVTRSPiINzravK_foriba.jpg" style="display: block; width: 40%; height: auto; margin-left: auto; margin-right: auto;">
+    </div>
+    <div class="spacer" style="width: 268px; height: 40px;"></div>
+
+    <h3 id="menu-heading1" style="color:#FFFFFF;font-weight:300; ">Foriba Error Log System</h3>
+      <div class="spacer" style="width: 268px; height: 39px;"></div>
+
+    <ion-list   >
+      <button menuClose ion-item  style="background:#34AEE1;color:white;font-weight:300;"
+       
+       *ngFor="let p of pages"
+        (click)="openPage(p)">
+        {{p.title}}
+      </button>
+    </ion-list>
+
+
+
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

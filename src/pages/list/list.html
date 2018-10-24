@@ -1,0 +1,92 @@
+<ion-header>
+  <ion-navbar  style="background:#34AEE1;">
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+
+    <ion-title style="background:#34AEE1;">
+      Hata Listesi
+    </ion-title>
+  </ion-navbar>
+
+
+</ion-header>
+
+<ion-content>
+
+  <div padding>
+    <ion-segment [(ngModel)]="errors">
+      <ion-segment-button value="daily">
+        Günlük
+      </ion-segment-button>
+      <ion-segment-button value="weekly">
+        Haftalık
+      </ion-segment-button>
+
+
+   
+
+    </ion-segment>
+    
+  </div>
+  
+  <div [ngSwitch]="errors">
+    <ion-list *ngSwitchCase="'daily'">
+
+      <ion-item>
+        <h2>Fatal Error</h2>
+        <h4>Servis bağlantı</h4>
+        <h5>BLL</h5>
+      </ion-item>
+
+      <ion-item>
+        <h2>Fatal Error</h2>
+        <h4>Servis bağlantı</h4>
+        <h5>BLL</h5>
+      </ion-item>
+      
+      <ion-item>
+        <h2>Fatal Error</h2>
+        <h4>Servis bağlantı</h4>
+        <h5>BLL</h5>
+      </ion-item>
+
+      <ion-item>
+        <h2>Fatal Error</h2>
+        <h4>Servis bağlantı</h4>
+        <h5>BLL</h5>
+      </ion-item>
+
+      <ion-item>
+        <h2>Fatal Error</h2>
+        <h4>Servis bağlantı</h4>
+        <h5>BLL</h5>
+      </ion-item>
+
+      <ion-item>
+        <h2>Fatal Error</h2>
+        <h4>Servis bağlantı</h4>
+        <h5>BLL</h5>
+      </ion-item>
+      <ion-item>
+        <h2>Fatal Error</h2>
+        <h4>Servis bağlantı</h4>
+        <h5>BLL</h5>
+      </ion-item>
+     
+
+
+    </ion-list>
+  
+    <ion-list *ngSwitchCase="'weekly'">
+      <ion-item *ngFor="let user of deneme"   > <!-- *ngFor="let p of errorList" -->
+              <h2>{{ user.error_type }} </h2>
+            </ion-item>
+
+          
+    </ion-list>
+
+
+
+  </div>
+</ion-content>
